@@ -2,24 +2,10 @@ import React from "react";
 
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native";
-import { Stack } from "expo-router";
-import { Provider } from "react-redux";
-import persistStore from "redux-persist/es/persistStore";
-import { PersistGate } from "redux-persist/integration/react";
-import { store } from "../redux/store";
-
-const persistor = persistStore(store);
 
 const Intro = ({navigation}) => {
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
         <SafeAreaView style={{ flex: 1, zIndex: 4 }}>
-          <Stack.Screen
-            options={{
-              headerShown: false,
-            }}
-          />
           <View
             style={{
               display: "flex",
@@ -79,8 +65,6 @@ const Intro = ({navigation}) => {
             </View>
           </View>
         </SafeAreaView>
-      </PersistGate>
-    </Provider>
   );
 };
 
