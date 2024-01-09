@@ -15,10 +15,8 @@ const Home = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-
-        <Stack.Screen options={{headerShown:false}}/>
-        <StackMain/>
-
+        <Stack.Screen options={{ headerShown: false }} />
+        <StackMain />
       </PersistGate>
     </Provider>
   );

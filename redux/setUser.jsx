@@ -3,14 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 const counterSlice = createSlice({
   name: 'user',
   initialState: { 
-    firstTime:true
+    firstTime: false,
   },
   reducers: {
-    setFirstTime: (state,action) => {
-        state.firstTime = action.payload.firstTime;
-    }
+    setFirstTime: (state, action) => {
+      state.firstTime = action.payload;
+    },
   },
 });
+
 
 export const { setFirstTime } = counterSlice.actions;
 export default counterSlice.reducer;

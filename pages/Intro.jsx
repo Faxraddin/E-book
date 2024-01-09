@@ -3,7 +3,17 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native";
 
+import { useDispatch } from "react-redux";
+import { setFirstTime } from "../redux/setUser";
+
 const Intro = ({navigation}) => {
+  const dispatch = useDispatch();
+
+  const handleContinue = async () => {
+    navigation.navigate('Signup');
+    dispatch(setFirstTime(true));
+  }
+
   return (
         <SafeAreaView style={{ flex: 1, zIndex: 4 }}>
           <View
@@ -52,9 +62,9 @@ const Intro = ({navigation}) => {
                   backgroundColor: "darkblue",
                   padding: 14,
                   borderWidth: 1,
-                  borderRadius: "50%",
+                  borderRadius: 30,
                 }}
-                onPress={()=>{navigation.navigate('Signup')}}
+                onPress={handleContinue}
               >
                 <Text
                   style={{ textAlign: "center", fontSize: 18, color: "white" }}
