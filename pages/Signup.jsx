@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, Animated } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, } from 'react-native';
 
 import { useSelector } from 'react-redux';
 
@@ -10,7 +10,6 @@ const SignUp = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
-  const [errorAnimation] = useState(new Animated.Value(0));
 
   const firstTime = useSelector((state) => state.user.firstTime);
 
@@ -56,30 +55,13 @@ const SignUp = ({ navigation }) => {
     }
   };
 
-  const showErrorBox = () => {
-    Animated.timing(errorAnimation, {
-      toValue: 1,
-      duration: 300,
-      useNativeDriver: false,
-    }).start();
-  };
-
-  useEffect(() => {
-    if (errors.name || errors.email || errors.password) {
-      showErrorBox();
-    }
-  }, [errors]);
-
-
   return (
     <View style={{ backgroundColor: 'white' }}>
       <View style={{ justifyContent: 'center', alignItems: 'center', height: '100%', display: 'flex' }}>
-        
-        <Animated.View  style={{ opacity: errorAnimation }}>
-          {errors.name && <ErrorAuth error={errors.name} />}
-          {errors.email && <ErrorAuth error={errors.email} />}
-          {errors.password && <ErrorAuth error={errors.password} />}
-        </Animated.View>
+
+        {errors.name && <ErrorAuth error={errors.name} />}
+        {errors.email && <ErrorAuth error={errors.email} />}
+        {errors.password && <ErrorAuth error={errors.password} />}
         
         <Image resizeMode='cover' style={{ width: '95%', flex: 1 }} source={require('../public/SignUp.png')} />
         <Text style={{ fontSize: 26, fontWeight: 800 }}>Welcome to our team!</Text>
