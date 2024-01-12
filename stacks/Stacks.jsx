@@ -2,6 +2,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useState,React} from "react";
 
+import TabsBottom from "./Tabs";
+
 import Main from "../pages/Main";
 import Intro from "../pages/Intro";
 
@@ -19,9 +21,10 @@ export default function StackMain() {
 
     return (   
         <NavigationContainer style={{zIndex:4,height:'100%'}} independent={true}>
-            <HomeStack.Navigator initialRouteName={`${intro ? 'Intro' : 'Main'}`}>
+            <HomeStack.Navigator initialRouteName={`${infoFirstTime ? 'Intro' : 'Main'}`}>
                 <HomeStack.Screen  options={{ headerShown: false }} name="Intro" component={Intro}/>
-                <HomeStack.Screen  options={{ headerShown: false }} name="Main" component={Main}/>
+                <HomeStack.Screen  options={{ headerShown: false }} name="TabsBottom" component={TabsBottom}/>
+                
                 <HomeStack.Screen  options={{ headerShown: true,headerTitle:'',headerBackVisible:false,headerStyle:{backgroundColor:'white'},headerShadowVisible:false }} name="Signup" component={SignUp}/>
                 <HomeStack.Screen  options={{ headerShown: true,headerTitle:'',headerBackVisible:false,headerStyle:{backgroundColor:'white'},headerShadowVisible:false }} name="Login" component={Login}/>
             </HomeStack.Navigator>

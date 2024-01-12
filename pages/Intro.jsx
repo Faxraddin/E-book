@@ -10,7 +10,7 @@ const Intro = ({navigation}) => {
   const dispatch = useDispatch();
 
   const handleContinue = async () => {
-    navigation.navigate('Signup');
+    navigation.navigate('TabsBottom');
     dispatch(setFirstTime(true));
   }
 
