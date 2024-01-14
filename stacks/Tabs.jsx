@@ -22,13 +22,13 @@ function Tabs () {
     
               if (route.name === 'Home') {
                 focused ? iconColor='#6d40f5':iconColor='gray'
-                return <Ionicons name={'home-outline'} size={size+7} color={iconColor} />;
+                return <Ionicons name={'home-outline'} size={size+2} color={iconColor} />;
               } else if (route.name === 'Search') {
                 focused ? iconColor='#6d40f5':iconColor='gray'
-                return <Fontisto name={"compass"} size={size+7} color={iconColor} />
+                return <Fontisto name={"compass"} size={size} color={iconColor} />
               } else if (route.name === 'Profile') {
                 focused ? iconColor='#6d40f5':iconColor='gray';
-                return <EvilIcons name={"user"} size={size+22} color={iconColor} />
+                return <EvilIcons name={"user"} size={size+13} color={iconColor} />
               }
             },
             headerShown: false,
