@@ -2,6 +2,8 @@ import React from "react";
 import { View,Text,Image,ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
+import { Ionicons } from '@expo/vector-icons';
+
 const Main = () => {
     const categoryWidth = 75 + 10;
     const categoryWidth2 = 270 + 10;
@@ -12,7 +14,8 @@ const Main = () => {
               
               <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{gap:30}}>
-                  <View style={{width:'100%',justifyContent:'flex-end',flexDirection:'row',}}>
+                  <View style={{width:'100%',justifyContent:'space-between',flexDirection:'row',alignItems:'center'}}>
+                      <Ionicons name="settings-outline" size={34} color="black" />
                       <Image style={{width:47,height:47,}} source={require('../public/Icon.png')}/>
                   </View>
 
