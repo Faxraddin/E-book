@@ -1,4 +1,6 @@
-import { View,Text,TextInput,ScrollView,Image } from "react-native"
+import { View,Text,TextInput,ScrollView } from "react-native"
+
+import Book from "../components/Book";
 
 const Library = () => {
     const categoryWidth1 = 130 + 10;
@@ -12,22 +14,12 @@ const Library = () => {
                         <Text style={{fontSize:24,fontWeight:700}}>New Books</Text>
                         <ScrollView  snapToInterval={categoryWidth1} decelerationRate="fast" showsHorizontalScrollIndicator={false} horizontal={true}>
                             <View style={{flexDirection:'row',gap:20}}>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
                             </View>
                         </ScrollView>
                     </View>            
@@ -36,22 +28,12 @@ const Library = () => {
                         <Text style={{fontSize:24,fontWeight:700}}>Your books</Text>
                         <ScrollView  snapToInterval={categoryWidth1} decelerationRate="fast" showsHorizontalScrollIndicator={false} horizontal={true}>
                             <View style={{flexDirection:'row',gap:20}}>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
                             </View>
                         </ScrollView>
                     </View>     
@@ -60,22 +42,12 @@ const Library = () => {
                         <Text style={{fontSize:24,fontWeight:700}}>Recommended</Text>
                         <ScrollView  snapToInterval={categoryWidth1} decelerationRate="fast" showsHorizontalScrollIndicator={false} horizontal={true}>
                             <View style={{flexDirection:'row',gap:20}}>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
-                                <View style={{gap:10}}>
-                                    <Image style={{width:130,height:200,objectFit:'contain',borderWidth:1,borderRadius:10}} source={require('../public/Book1.jpg')}/>
-                                    <Text style={{fontSize:16,fontWeight:400}}>Once upon a river</Text>
-                                </View>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
+                                <Book/>
                             </View>
                         </ScrollView>
                     </View>          
