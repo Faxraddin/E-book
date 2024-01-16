@@ -2,7 +2,7 @@ import { View,Text,TextInput,ScrollView } from "react-native"
 
 import Book from "../components/Book";
 
-const Library = () => {
+const Library = ({navigation}) => {
     const categoryWidth1 = 130 + 10;
   return (
     <View style={{flex:1,display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:'white',width:'100%'}}>
@@ -14,12 +14,12 @@ const Library = () => {
                         <Text style={{fontSize:24,fontWeight:700}}>New Books</Text>
                         <ScrollView  snapToInterval={categoryWidth1} decelerationRate="fast" showsHorizontalScrollIndicator={false} horizontal={true}>
                             <View style={{flexDirection:'row',gap:20}}>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
                             </View>
                         </ScrollView>
                     </View>            
@@ -28,12 +28,12 @@ const Library = () => {
                         <Text style={{fontSize:24,fontWeight:700}}>Your books</Text>
                         <ScrollView  snapToInterval={categoryWidth1} decelerationRate="fast" showsHorizontalScrollIndicator={false} horizontal={true}>
                             <View style={{flexDirection:'row',gap:20}}>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
+                            <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
                             </View>
                         </ScrollView>
                     </View>     
@@ -42,12 +42,12 @@ const Library = () => {
                         <Text style={{fontSize:24,fontWeight:700}}>Recommended</Text>
                         <ScrollView  snapToInterval={categoryWidth1} decelerationRate="fast" showsHorizontalScrollIndicator={false} horizontal={true}>
                             <View style={{flexDirection:'row',gap:20}}>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
-                                <Book/>
+                            <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
+                                <Book navigation={navigation}/>
                             </View>
                         </ScrollView>
                     </View>          

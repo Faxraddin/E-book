@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
 
 import Main from "../pages/Main";
-import Library from "../pages/Library";
+import LibraryStack from "./LibrarySlack";
 
 const Tab = createBottomTabNavigator();
 
@@ -45,7 +45,7 @@ function Tabs () {
           
         >
           <Tab.Screen name="Home" component={Main} />
-          <Tab.Screen name="Library" component={Library} />
+          <Tab.Screen name="Library" component={LibraryStack} />
           <Tab.Screen name="Profile" component={Main} />
         </Tab.Navigator>
       );
