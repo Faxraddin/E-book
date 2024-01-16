@@ -1,10 +1,18 @@
 import React from "react";
 import { View,Text,Image,TouchableOpacity } from "react-native";
 
+import { useDispatch } from "react-redux";
+import { setBookImg, setBookText, setBookTitle } from "../redux/setBook";
+
 const Book = (props) => {
+  const dispatch = useDispatch()
 
   const handleClick = () => {
-    props.navigation.navigate("OpenBook",{book: props.item});
+    dispatch(setBookImg(require('../public/Book1.jpg')));
+    dispatch(setBookText('upon a rOnce upon a river rOnce upon a riverOnce upon a riverOnce upon a rivervvvvvvvvvOnce upon a riverOnce upon a riverOnce upon a riverOnce upon a riverOnce upon a riverOnce upon a riverOnce upon a riveriverOnce upon a riverOnce upon a riverOnce upon a riverOnce upon a riverce upon a river'));
+    dispatch(setBookTitle('Once upon a river'))
+
+    props.navigation.navigate("OpenBook");
   }
 
   return (
