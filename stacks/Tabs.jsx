@@ -4,10 +4,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { Ionicons } from '@expo/vector-icons';
-import { EvilIcons } from '@expo/vector-icons';
 
-import Main from "../pages/Main";
+import MainStack from "./MainStack";
 import LibraryStack from "./LibrarySlack";
+import Explore from "../pages/Explore";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,9 +25,9 @@ function Tabs () {
               } else if (route.name === 'Library') {
                 focused ? iconColor='#6d40f5':iconColor='gray'
                 return <Ionicons name={"library-outline"} size={size} color={iconColor} />
-              } else if (route.name === 'Profile') {
+              } else if (route.name === 'Explore') {
                 focused ? iconColor='#6d40f5':iconColor='gray';
-                return <EvilIcons name={"user"} size={size+13} color={iconColor} />
+                return <Ionicons name={"compass-outline"} size={size+10} color={iconColor} />
               }
             },
             headerShown: false,
@@ -44,9 +44,9 @@ function Tabs () {
           })}
           
         >
-          <Tab.Screen name="Home" component={Main} />
+          <Tab.Screen name="Home" component={MainStack} />
           <Tab.Screen name="Library" component={LibraryStack} />
-          <Tab.Screen name="Profile" component={Main} />
+          <Tab.Screen name="Explore" component={Explore} />
         </Tab.Navigator>
       );
 };
