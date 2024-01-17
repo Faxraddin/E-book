@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Library from "../pages/Library";
 import OpenBook from "../pages/OpenBook";
+import ReadBook from "../pages/ReadBook";
 
 const LibrarySlack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ export default function LibraryStack(){
 
                 <LibrarySlack.Screen options={{headerShown:false}} name="Library" component={Library}/>
                 <LibrarySlack.Screen options={{headerShown:false}} name="OpenBook" component={OpenBook}/>
+                <LibrarySlack.Screen options={{headerShown:false}} name="ReadBook" component={ReadBook}/>
 
             </LibrarySlack.Navigator>
         </NavigationContainer>
