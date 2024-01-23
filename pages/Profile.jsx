@@ -3,16 +3,20 @@ import { useState } from "react"
 import { View,Text,ScrollView,Image,TouchableOpacity,TextInput } from "react-native"
 
 import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import ProfileCategories from "../components/ProfileCategories";
 import ProfileLibrary from "../components/ProfileLibrary";
 
-const Profile = () => {
+const Profile = ({navigation}) => {
 
     const [library,setLibrary] = useState(false)
 
     return (
       <View style={{flex:1,display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:'white',width:'100%'}}>
+          <TouchableOpacity onPress={()=>(navigation.navigate('Main'))} style={{position:'absolute',zIndex:5,top:50,left:20}}>
+            <Ionicons name="return-up-back" size={40} color="black" />
+          </TouchableOpacity>
           <View style={{width:'88%',gap:0,flex:1,position:'relative',top:'18%',gap:20,paddingBottom:'22%'}}>
 
             <ScrollView>
