@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotentv = require('dotenv');
+import { graphqlHTTP } from 'express-graphql';
+const schema = require('./models/index');
 
 const app = express();
 dotentv.config();
@@ -9,6 +11,15 @@ dotentv.config();
 app.use(express.json());
 app.use(cors({origin:true,credentials:true}));
 app.use(express.urlencoded({extended:true}));
+
+app.use(
+  "/graphq",
+  graphqlHTTP({
+    schema,
+    graphiql: true,
+  })
+);
+
 
 const DB = process.env.URL;
 const PORT = 8000;
