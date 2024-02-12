@@ -55,7 +55,19 @@ const Login = async (req, res) => {
   }
 };
 
+// Add book
+
+const AddBook = async (req,res) => {
+  try {
+    
+  } catch (error) {
+    res.status(500).json({ message: "Error with Login" });
+  }
+}
+
 module.exports = {
     Login:Login,
     SignUp:SignUp,
+
+    AddBook:AddBook,
 }
