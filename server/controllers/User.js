@@ -6,7 +6,6 @@ import User from "../models/User";
 dotenv.config();
 
 // Sign Up
-
 const SignUp = async (req,res) => {
     const { name, email, password } = req.body;
 
@@ -36,7 +35,6 @@ const SignUp = async (req,res) => {
 };
 
 // Sign In
-
 const Login = async (req, res) => {
   try {
     const {email,password} = req.body;
