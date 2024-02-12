@@ -3,6 +3,8 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 
 import User from "../models/User";
+import Book from "../models/Book";
+
 dotenv.config();
 
 // Sign Up
@@ -59,9 +61,22 @@ const Login = async (req, res) => {
 
 const AddBook = async (req,res) => {
   try {
-    
+    const { author, title, text, category, userId } = req.body;
+
+    // Create a new book and associate the book with the specific user
+    const newBook = new Book({
+      author,
+      title,
+      text,
+      category,
+      user: userId,
+    });
+
+    await newBook.save();
+
+     res.status(201).json({ message: "Book added successfully"});
   } catch (error) {
-    res.status(500).json({ message: "Error with Login" });
+    res.status(500).json({ message: "Error adding book" });
   }
 }
 
