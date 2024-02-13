@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotentv = require('dotenv');
 
-import UserRoutes from './routes/User';
+const UserRoutes = require('./routes/User');
 
 const app = express();
 dotentv.config();
