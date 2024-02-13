@@ -92,10 +92,24 @@ const GetBooksForUser = async (req, res) => {
   }
 }
 
-module.exports = {
-    Login:Login,
-    SignUp:SignUp,
+//GetBooksForUserCategory
+const GetBooksForUserCategory = async (req,res) => {
+  try {
+    const {userId,category} = req.body;
 
-    AddBook:AddBook,
-    GetBooksForUser:GetBooksForUser,
+    const booksByCategory = await Book.find( {user:userId, category:category});
+
+    res.status(200).json({ booksByCategory: booksByCategory });
+  } catch (error) {
+    res.status(500).json({ message: "Error GetBooksForUserCategory" });
+  }
 }
+
+module.exports = {
+  Login: Login,
+  SignUp: SignUp,
+
+  AddBook: AddBook,
+  GetBooksForUser: GetBooksForUser,
+  GetBooksForUserCategory: GetBooksForUserCategory,
+};
