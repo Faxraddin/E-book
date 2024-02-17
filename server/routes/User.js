@@ -14,24 +14,24 @@ const {
 } = require("../controllers/User");
 
 // Sign Up
-router.post('/signup', SignUp);
+router.post('/signUp', SignUp);
 
 // Sign In
 router.post('/login', Login);
 
 // Add book
-router.post('/addbook', AddBook);
+router.post('/addBook', AddBook);
 
 // Get books for a user
 router.get('/getbooksforuser/:userId', GetBooksForUser);
 
 // Get books for a user with a specific category
-router.get('/getbooksforusercategory/:userId/:category', GetBooksForUserCategory);
+router.get('/getBooksForUserCategory/:userId/:category', GetBooksForUserCategory);
 
 // UpdateUserProgress
-router.post("/UpdateUserProgress", UpdateUserProgress);
+router.post("/updateUserProgress", UpdateUserProgress);
 
 //  ContinueToReadTheBook
-router.get('/ContinueToReadTheBook',  ContinueToReadTheBook);
+router.get('/continueToReadTheBook',  ContinueToReadTheBook);
 
 module.exports = router;
