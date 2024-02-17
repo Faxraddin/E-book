@@ -125,7 +125,6 @@ const ContinueToReadTheBook = async (req, res) => {
 };
 
 //UpdateUserProgress
-
 const UpdateUserProgress = async (req, res) => {
   try {
     const { userId, bookId } = req.body;
