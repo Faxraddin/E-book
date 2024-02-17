@@ -106,7 +106,6 @@ const GetBooksForUserCategory = async (req,res) => {
 }
 
 //Continue to read  the book
-
 const ContinueToReadTheBook = async (req, res) => {
   try {
     const { userId } = req.body;
