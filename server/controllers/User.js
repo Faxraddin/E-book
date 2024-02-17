@@ -105,6 +105,26 @@ const GetBooksForUserCategory = async (req,res) => {
   }
 }
 
+//Continue to read  the book
+
+const ContinueToReadTheBook = async (req, res) => {
+  try {
+    const { userId } = req.body;
+
+    const user = await User.findById(userId).populate('userProgress');
+
+    if (!user || !user.userProgress) {
+      return res.status(404).json({ message: "No book in progress found." });
+    };
+
+    const bookDetails = user.userProgress;
+
+    res.status(200).json({ bookDetails });
+  } catch (error) {
+    res.status(500).json({ message: "Error ContinueToReadTheBook" });
+  }
+};
+
 module.exports = {
   Login: Login,
   SignUp: SignUp,
@@ -112,4 +132,6 @@ module.exports = {
   AddBook: AddBook,
   GetBooksForUser: GetBooksForUser,
   GetBooksForUserCategory: GetBooksForUserCategory,
+
+  ContinueToReadTheBook:ContinueToReadTheBook,
 };

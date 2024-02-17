@@ -13,6 +13,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  userProgress: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Book",
+  },
 });
 
 module.exports = mongoose.model('User',userSchema)
