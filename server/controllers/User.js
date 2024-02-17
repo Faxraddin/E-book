@@ -145,4 +145,5 @@ module.exports = {
   GetBooksForUserCategory: GetBooksForUserCategory,
 
   ContinueToReadTheBook:ContinueToReadTheBook,
+  UpdateUserProgress:UpdateUserProgress,
 };

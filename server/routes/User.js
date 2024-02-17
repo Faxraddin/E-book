@@ -8,6 +8,9 @@ const {
   AddBook,
   GetBooksForUser,
   GetBooksForUserCategory,
+
+  UpdateUserProgress,
+  ContinueToReadTheBook,
 } = require("../controllers/User");
 
 // Sign Up
@@ -24,5 +27,11 @@ router.get('/getbooksforuser/:userId', GetBooksForUser);
 
 // Get books for a user with a specific category
 router.get('/getbooksforusercategory/:userId/:category', GetBooksForUserCategory);
+
+// UpdateUserProgress
+router.post("/UpdateUserProgress", UpdateUserProgress);
+
+//  ContinueToReadTheBook
+router.get('/ContinueToReadTheBook',  ContinueToReadTheBook);
 
 module.exports = router;
