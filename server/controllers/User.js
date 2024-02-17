@@ -124,6 +124,19 @@ const ContinueToReadTheBook = async (req, res) => {
   }
 };
 
+//UpdateUserProgress
+
+const UpdateUserProgress = async (req, res) => {
+  try {
+    const { userId, bookId } = req.body;
+
+    await User.findByIdAndUpdate(userId, { userProgress: bookId });
+    res.status(200).json({ message: "User progress updated successfully." });
+  } catch (error) {
+    res.status(500).json({ message: "Error UpdateUserProgress" });
+  }
+}
+
 module.exports = {
   Login: Login,
   SignUp: SignUp,
